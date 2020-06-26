@@ -86,7 +86,13 @@ module.exports = webpackMerge.smart(baseConfig, {
   optimization: {
     usedExports: true,
     splitChunks: {
-      chunks: 'all',
+      cacheGroups: {
+        commons: {
+          test: /[\\/]node_modules[\\/]/,
+          name: 'vendors',
+          chunks: 'all',
+        },
+      },
     },
   },
 });
