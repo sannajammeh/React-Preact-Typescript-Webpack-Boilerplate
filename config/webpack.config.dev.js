@@ -36,5 +36,5 @@ module.exports = webpackMerge.smart(baseConfig, {
       { test: /\.css$/, use: ['style-loader', 'css-loader'] },
     ],
   },
-  plugins: [new webpack.WatchIgnorePlugin(/s(a|c)ss$\.d\.ts$/)],
+  plugins: [new webpack.WatchIgnorePlugin([/s(a|c)ss$\.d\.ts$/])],
 });
