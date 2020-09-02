@@ -1,3 +1,4 @@
+const path = require('path');
 const webpack = require('webpack');
 const baseConfig = require('./webpack.config.base');
 const webpackMerge = require('webpack-merge');
@@ -5,7 +6,7 @@ const webpackMerge = require('webpack-merge');
 module.exports = webpackMerge.smart(baseConfig, {
   devServer: {
     contentBase: path.resolve(__dirname, 'build'),
-    port: 8888,
+    port: 3000,
   },
   mode: 'development',
   module: {
